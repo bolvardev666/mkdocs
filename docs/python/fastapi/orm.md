@@ -44,3 +44,13 @@ register_tortoise(
     add_exception_handlers=True
 )
 ```
+## 增删改查
+
+```python
+from xxx.model import User #导入orm数据模型
+
+a = await User.exists(xxx=xxx) #判断是否存在,返回True/False
+
+user = await User.get_or_none(xxx=xxx) 
+
+```
