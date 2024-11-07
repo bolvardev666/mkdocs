@@ -1,0 +1,25 @@
+site_name: bolvar的笔记站点
+theme:
+  name: material
+markdown_extensions:
+    - pymdownx.superfences
+
+nav:
+  - About Mkdocs: mkdocs/index.md
+  - Python:
+    - Base: python/base.md
+    - fastapi:
+      - 路由: python/fastapi/route.md
+      - tortoise-orm: python/fastapi/orm.md
+      - model: python/fastapi/model.md
+      - pydantic: python/fastapi/pydantic.md
+
+    - asyncio: python/asyncio.md
+    - SQLAlchemy-ORM: python/sqlalchemy-orm.md
+  - Linux:
+    - Base: linux/base.md
+    - Docker: linux/docker.md
+    - Kubernetes: linux/kubernetes.md
+
+  - Git: git/index.md
+  - Network: network/index.md
