@@ -8,6 +8,7 @@ nav:
   - About Mkdocs: mkdocs/index.md
   - Python:
     - Base: python/base.md
+    - 线程: python/线程.md
     - fastapi:
       - 路由: python/fastapi/route.md
       - tortoise-orm: python/fastapi/orm.md
