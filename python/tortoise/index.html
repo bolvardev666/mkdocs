@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../%E7%BA%BF%E7%A8%8B/">
+      
+      
+        <link rel="next" href="../s3/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>orm选择 - bolvar的笔记站点</title>
+        <title>tortoise-orm - bolvar的笔记站点</title>
       
     
     
@@ -58,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#orm" class="md-skip">
+        <a href="#tortoise-orm" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              orm选择
+              tortoise-orm
             
           </span>
         </div>
@@ -204,17 +208,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -228,7 +234,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -281,6 +287,97 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    tortoise-orm
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    tortoise-orm
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      条件查询扩充运算符
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    S3API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     
@@ -291,10 +388,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -305,8 +402,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             fastapi
           </label>
@@ -618,6 +715,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      条件查询扩充运算符
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -631,41 +745,88 @@
                   
 
 
-<h1 id="orm">orm选择</h1>
+<h1 id="tortoise-orm">tortoise-orm</h1>
+<p>tortoise-orm设计上与django的orm类似,在配合fastapi使用时需要对tortoise进行注册,会自动与fastapi一起启动,在单独使用时每次启动都需要启动初始化模型才可以执行ORM操作</p>
 <table>
 <thead>
 <tr>
-<th>ORM框架</th>
-<th>异步支持</th>
-<th>数据库支持</th>
-<th>优点</th>
-<th>缺点</th>
+<th>Type</th>
+<th>method</th>
+<th>info</th>
+<th>return</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Tortoise-ORM</td>
-<td>仅异步</td>
-<td>ALL</td>
-<td>简单</td>
-<td>不支持复杂内容</td>
+<td>Query</td>
+<td>模型.get(条件)</td>
+<td>查询</td>
+<td></td>
 </tr>
 <tr>
-<td>GINO</td>
-<td>仅异步</td>
-<td>ALL</td>
-<td>快</td>
-<td>有点难</td>
+<td>Query</td>
+<td>模型.get_or_none(条件)</td>
+<td>不存在就返回None</td>
+<td></td>
 </tr>
 <tr>
+<td>Query</td>
+<td>模型.all()</td>
+<td>查询所有</td>
+<td>QuerySet = object</td>
+</tr>
+<tr>
+<td>Query</td>
+<td>模型.fillter(条件).all</td>
+<td>查询,返回所有</td>
+<td></td>
+</tr>
+<tr>
+<td>Query</td>
+<td>模型.fillter(条件).first</td>
+<td>返回第一条</td>
+<td>QuerySetSingle</td>
+</tr>
+<tr>
+<td>Query</td>
+<td>模型.fillter(条件).count()</td>
+<td>返回条数</td>
+<td>CountQuery = int</td>
+</tr>
+<tr>
+<td>Query</td>
+<td>模型.all(条件).offset().limit()</td>
+<td>分页</td>
+<td>QuerySet = object</td>
+</tr>
+<tr>
+<td>Query</td>
+<td>values('字段1','字段2',...)</td>
+<td>指定查询字段</td>
+<td>List[Dict]</td>
+</tr>
+<tr>
+<td>Update</td>
+<td>模型.fillter().update(条件)</td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>模型.fillter().delete()</td>
 <td></td>
+<td></td>
+</tr>
+<tr>
+<td>Add</td>
+<td>模型.create(xxx)</td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<h2 id="_1">条件查询扩充运算符</h2>
+<p>| </p>
 
 
 
